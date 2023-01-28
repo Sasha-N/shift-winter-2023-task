@@ -1,0 +1,53 @@
+nav {
+    background-color: black;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-left: 162px;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.nav-button-group {
+    padding-right: 173px;
+    width: 208px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-block {
+    width: 100%;
+    background-image: linear-gradient(270.68deg, rgba(255, 255, 255, 0) 0.59%, #151515 101.54%),
+    url('./../../assets/1233.png');
+    height: 700px;
+    background-repeat: no-repeat;
+}
+
+.title {
+    position: absolute;
+    height: 54px;
+    padding-left: 184px;
+    padding-top: 288px;
+    
+    font-family: 'Poppins';
+
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 54px;
+    
+    color: white;
+}
