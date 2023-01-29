@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { baseCardDeck } from './../constants/constants'
 
 @Component({
   selector: 'app-game-page',
@@ -10,6 +11,10 @@ export class GamePageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public onClick(a: any) {
+    console.log(a)
   }
 
 }
