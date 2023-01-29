@@ -17,7 +17,7 @@ nav {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 21px;
 }
 
@@ -40,7 +40,6 @@ nav {
 }
 
 .title {
-    position: absolute;
     height: 54px;
     padding-left: 184px;
     padding-top: 288px;
@@ -50,6 +49,22 @@ nav {
     font-weight: 900;
     font-size: 36px;
     line-height: 54px;
+    font-style: normal;
+
+    color: white;
+}
+
+.subtitle {
+    height: 30px;
+    width: 450px;
+    padding-left: 184px;
+
+    font-family: 'Poppins';
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    font-style: normal;
 
     color: white;
 }
