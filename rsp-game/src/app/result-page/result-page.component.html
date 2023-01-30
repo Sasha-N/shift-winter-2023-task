@@ -1,7 +1,17 @@
 <div class="container">
     <div class="subtitle-game">Ваш выбор и выбор противника:</div>
-    <div class="cards-result-container">
-        <app-card class="playerChooses" cardName="paper"></app-card>
-        <app-card class="computerChooses" cardName="rock"></app-card>
+    <div class="result-container">
+        <div class="cards-result-container">
+            <app-card class="playerChooses" cardName="paper"></app-card>
+            <app-card class="computerChooses" cardName="rock"></app-card>
+        </div>
+        <div class="result-description">
+            <img src="./../../assets/win.png">
+            <div class="result-description-group">
+                <div class="result-description-title">Поздравляем с победой!</div>
+                <button class="btn-play">Играть еще раз</button>
+                <button class="btn-stat">Статистика</button>
+            </div>
+        </div>
     </div>
 </div>

@@ -6,13 +6,27 @@
 
 .subtitle-game {
     padding-top: 89px;
-    padding-left: 10%;
+    padding-left: 8%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
     line-height: 24px;
     margin-bottom: 58px;
+}
+
+.result-description-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 24px;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .cards-result-container {
@@ -23,9 +37,58 @@
 }
 
 .playerChooses {
-    margin-right: 20%;
+    padding-right: 40%;
 }
 
 .computerChooses {
-    margin-left: 20%;
+    padding-left: 80%;
+    padding-top: 10%;
+}
+
+.result-description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-play {
+    margin-top: 50px;
+    box-sizing: border-box;
+    width: 323px;
+    height: 68px;
+    background: #F67A03;
+    border: 1.5px solid #F67902;
+    border-radius: 66px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: #FFFFFF;
+}
+
+.btn-stat {
+    margin-top: 50px;
+    box-sizing: border-box;
+    width: 323px;
+    height: 68px;
+    background: transparent;
+    border: 1.5px solid #F67902;
+    border-radius: 66px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: #F67A03;
+}
+
+.result-description-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
