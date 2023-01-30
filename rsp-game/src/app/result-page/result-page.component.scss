@@ -6,11 +6,26 @@
 
 .subtitle-game {
     padding-top: 89px;
-    padding-left: 189px;
+    padding-left: 10%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
     line-height: 24px;
     margin-bottom: 58px;
+}
+
+.cards-result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.playerChooses {
+    margin-right: 20%;
+}
+
+.computerChooses {
+    margin-left: 20%;
 }
