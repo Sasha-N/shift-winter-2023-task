@@ -7,14 +7,19 @@ import { baseCardDeck } from './../constants/constants'
   styleUrls: ['./game-page.component.scss']
 })
 export class GamePageComponent implements OnInit {
+  public playersCard: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public onClick(a: any) {
-    console.log(a)
+  public playerChooses(item: string):void {
+    this.playersCard = item;
+  }
+
+  public play() {
+    console.log('result', this.playersCard)
   }
 
 }

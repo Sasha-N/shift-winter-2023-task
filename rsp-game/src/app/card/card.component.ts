@@ -14,7 +14,7 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public chooseCard(value:string) {
+  public chooseCard(value:string):void {
     this.playersCard.emit(value);
   }
 
