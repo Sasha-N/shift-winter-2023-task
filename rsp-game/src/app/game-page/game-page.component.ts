@@ -35,18 +35,15 @@ export class GamePageComponent implements OnInit {
 
     if (this.playersCard == botChoise) {
       this.gameStatusService.set('draw');
-      console.log('result: nobody', this.playersCard, botChoise);
       return;
     };
 
     if (winСombinations[this.playersCard] == botChoise) {
       this.gameStatusService.set('win');
-      console.log('result: you win', this.playersCard, botChoise);
       return;
     }
 
-    this.gameStatusService.set('lose');
-    console.log('result: you lose', this.playersCard, botChoise)
+    this.gameStatusService.set('fail');
   }
 
 }
