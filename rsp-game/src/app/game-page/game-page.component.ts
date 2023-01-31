@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { baseCardDeck } from './../constants/constants';
 import { winСombinations } from './../constants/constants';
+import { GameStatusService } from '../providers/game-status.service';
 
 @Component({
   selector: 'app-game-page',
@@ -10,37 +11,41 @@ import { winСombinations } from './../constants/constants';
 export class GamePageComponent implements OnInit {
   public playersCard: string = '';
 
-  constructor() { }
+  constructor(private gameStatusService: GameStatusService) { }
 
   ngOnInit(): void {
   }
-  
-  private generateRandomNumber():number {
-    return Math.floor(Math.random()*3);
+
+  private generateRandomNumber(): number {
+    return Math.floor(Math.random() * 3);
   }
 
-  private generateBotAnswer():string {
+  private generateBotAnswer(): string {
     let randomNumber = this.generateRandomNumber();
     return baseCardDeck[randomNumber];
   }
 
-  public playerChooses(item: string):void {
+  public playerChooses(item: string): void {
     this.playersCard = item;
   }
 
-  public play():void {
+  public play(): void {
     let botChoise = this.generateBotAnswer();
+    this.gameStatusService.setCards(this.playersCard, botChoise);
 
     if (this.playersCard == botChoise) {
+      this.gameStatusService.set('draw');
       console.log('result: nobody', this.playersCard, botChoise);
-      return ;
+      return;
     };
 
     if (winСombinations[this.playersCard] == botChoise) {
+      this.gameStatusService.set('win');
       console.log('result: you win', this.playersCard, botChoise);
-      return ;
+      return;
     }
 
+    this.gameStatusService.set('lose');
     console.log('result: you lose', this.playersCard, botChoise)
   }
 
