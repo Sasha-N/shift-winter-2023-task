@@ -8,17 +8,17 @@ export const winСombinations: combinations = {
     'scissor': 'paper'
 };
 
-export const resultDescription = {
-    'win': {
-        title: 'Поздравляем с победой!',
-        image: './../../assets/win.png'
-    },
-    'draw': {
-        title: 'Победила дружба!',
-        image: './../../assets/friendship.png'
-    },
-    'fail': {
-        title: 'К сожалению, вы проиграли',
-        image: './../../assets/fail.png'
-    }
-}
+export const winDescription = {
+    title: 'Поздравляем с победой!',
+    image: './../../assets/win.png'
+};
+
+export const drawDescription = {
+    title: 'Победила дружба!',
+    image: './../../assets/friendship.png'
+};
+
+export const failDescription = {
+    title: 'К сожалению, вы проиграли',
+    image: './../../assets/fail.png'
+};

@@ -2,14 +2,14 @@
     <div class="subtitle-game">Ваш выбор и выбор противника:</div>
     <div class="result-container">
         <div class="cards-result-container">
-            <app-card class="playerChooses" cardName="paper"></app-card>
-            <app-card class="computerChooses" cardName="rock"></app-card>
+            <app-card class="playerChooses" cardName="{{resultCards[0]}}"></app-card>
+            <app-card class="computerChooses" cardName="{{resultCards[1]}}"></app-card>
         </div>
         <div class="result-description">
-            <img src="./../../assets/win.png">
+            <img src="{{imagePath}}">
             <div class="result-description-group">
-                <div class="result-description-title">Поздравляем с победой!</div>
-                <button class="btn-play">Играть еще раз</button>
+                <div class="result-description-title">{{subtitleText}}</div>
+                <button class="btn-play" routerLink="/game">Играть еще раз</button>
                 <button class="btn-stat">Статистика</button>
             </div>
         </div>

@@ -7,8 +7,9 @@ export class GameStatusService {
   private state: string = '';
   private playersCard: string = '';
   private computersCard: string = '';
+  
 
-  constructor() {}
+  constructor() { }
 
   set(state: string) {
     this.state = state;
