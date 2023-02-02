@@ -2,7 +2,7 @@
     <img class="logo" src="../../assets/logo.png">
     <div class="nav-button-group">
         <button class="nav-button" routerLink='{{pathGame}}'>Играть</button>
-        <button class="nav-button" routerLink='{{pathSpecification}}'>Об игре</button>
+        <button class="nav-button" (click)="openNewTab()">Об игре</button>
     </div>
 </nav>
 <div class="main-block">
@@ -10,6 +10,6 @@
     <div class="subtitle">В борьбе с искусственным интеллектом</div>
     <div class="landing-button-group">
         <button class="landing-button" routerLink='{{pathGame}}'>Играть</button>
-        <button class="landing-button" routerLink='{{pathSpecification}}'>Об игре</button>
+        <button class="landing-button" (click)="openNewTab()">Об игре</button>
     </div>
 </div>
