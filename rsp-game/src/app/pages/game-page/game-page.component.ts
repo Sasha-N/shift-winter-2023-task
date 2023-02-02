@@ -77,6 +77,7 @@ export class GamePageComponent implements OnInit {
         return;
       }
       this.playersName = data;
+      this.gameStatusService.setName(this.playersName);
     });
   }
 

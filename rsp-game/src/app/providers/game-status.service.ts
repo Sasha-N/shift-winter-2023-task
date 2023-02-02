@@ -7,6 +7,7 @@ export class GameStatusService {
   private state: string = '';
   private playersCard: string = '';
   private computersCard: string = '';
+  private playersName: string = '';
   
 
   constructor() { }
@@ -26,5 +27,13 @@ export class GameStatusService {
 
   getCards(): Array<string> {
     return [this.playersCard, this.computersCard];
+  }
+
+  setName(playersName: string) {
+    this.playersName = playersName;
+  }
+
+  getName(): string{
+    return this.playersName;
   }
 }

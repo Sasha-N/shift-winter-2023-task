@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameStatusService } from './../../providers/game-status.service';
 import { winDescription, drawDescription, failDescription } from './../../constants/constants';
+import { LocalService } from 'src/app/providers/local.service';
 
 @Component({
   selector: 'app-result-page',
@@ -12,25 +13,34 @@ export class ResultPageComponent implements OnInit {
   public resultCards: Array<string> = [];
   public subtitleText: string = '';
   public imagePath: string = '';
+  public playersName: string = '';
+  public today = new Date();
 
-  constructor(private gameStatusService: GameStatusService) { }
+  constructor(private gameStatusService: GameStatusService, private localService: LocalService) { }
 
   ngOnInit(): void {
     this.resultStatus = this.gameStatusService.get();
     this.resultCards = this.gameStatusService.getCards();
+    this.playersName = this.gameStatusService.getName();
+
+    this.localService.saveData('date', this.today.toLocaleString());
+    this.localService.saveData('name', this.playersName);
 
     if (this.resultStatus == 'win') {
       this.subtitleText = winDescription.title;
       this.imagePath = winDescription.image;
+      this.localService.saveData('state', 'win');
       return;
     }
 
     if (this.resultStatus == 'draw') {
       this.subtitleText = drawDescription.title;
       this.imagePath = drawDescription.image;
+      this.localService.saveData('state', 'draw');
       return;
     }
 
+    this.localService.saveData('state', 'fail');
     this.subtitleText = failDescription.title;
     this.imagePath = failDescription.image;
 
