@@ -68,7 +68,7 @@ export class GamePageComponent implements OnInit {
     dialog = this.matDialog.open(AddNameDialogComponent, {
       panelClass: 'add-name-dialog',
       data: {},
-      autoFocus: false,
+      autoFocus: true,
       width: '800px',
     });
 
