@@ -8,6 +8,7 @@ import { pagesRoutes } from 'src/app/constants/constants';
 })
 export class LandingPageComponent implements OnInit {
   public pathGame: string = '/' + pagesRoutes[0];
+  public pathSpecification: string = '/' + pagesRoutes[2];
 
   constructor() { }
 

@@ -1,6 +1,6 @@
 import { combinations } from "./interfaces";
 
-export const pagesRoutes: Array<string> = ['game', 'result'];
+export const pagesRoutes: Array<string> = ['game', 'result', 'specification'];
 
 export const baseCardDeck: Array<string> = ['paper', 'rock', 'scissor'];
 
