@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { GameStatusService } from './../../providers/game-status.service';
 import { winDescription, drawDescription, failDescription } from './../../constants/constants';
 import { LocalService } from 'src/app/providers/local.service';
+import { HistoryComponent } from '../history/history.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-result-page',
@@ -16,7 +18,8 @@ export class ResultPageComponent implements OnInit {
   public playersName: string = '';
   public today = new Date();
 
-  constructor(private gameStatusService: GameStatusService, private localService: LocalService) { }
+
+  constructor(private gameStatusService: GameStatusService, private localService: LocalService, public matDialog: MatDialog) { }
 
   ngOnInit(): void {
     this.resultStatus = this.gameStatusService.get();
@@ -43,6 +46,18 @@ export class ResultPageComponent implements OnInit {
     this.localService.saveData('state', 'fail');
     this.subtitleText = failDescription.title;
     this.imagePath = failDescription.image;
+
+  };
+
+  public openHistoryDialog(): void {
+    let dialog;
+
+    dialog = this.matDialog.open(HistoryComponent, {
+      panelClass: 'app-history',
+      data: {},
+      autoFocus: false,
+      width: '800px',
+    });
 
   }
 

@@ -12,6 +12,7 @@ import { ResultPageComponent } from './pages/result-page/result-page.component';
 import { SpecificationPageComponent } from './pages/specification-page/specification-page.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AddNameDialogComponent } from './pages/add-name-dialog/add-name-dialog.component';
+import { HistoryComponent } from './pages/history/history.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AddNameDialogComponent } from './pages/add-name-dialog/add-name-dialog.
     CardComponent,
     ResultPageComponent,
     SpecificationPageComponent,
-    AddNameDialogComponent
+    AddNameDialogComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
