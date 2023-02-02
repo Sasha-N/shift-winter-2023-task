@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { baseCardDeck } from './../constants/constants';
 import { winСombinations } from './../constants/constants';
 import { GameStatusService } from '../providers/game-status.service';
+import { ApiService } from '../providers/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game-page',
@@ -10,40 +12,50 @@ import { GameStatusService } from '../providers/game-status.service';
 })
 export class GamePageComponent implements OnInit {
   public playersCard: string = '';
+  public botChoise: string = '';
 
-  constructor(private gameStatusService: GameStatusService) { }
+  constructor(private gameStatusService: GameStatusService, private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
-  }
-
-  private generateRandomNumber(): number {
-    return Math.floor(Math.random() * 3);
-  }
-
-  private generateBotAnswer(): string {
-    let randomNumber = this.generateRandomNumber();
-    return baseCardDeck[randomNumber];
   }
 
   public playerChooses(item: string): void {
     this.playersCard = item;
   }
 
-  public play(): void {
-    let botChoise = this.generateBotAnswer();
-    this.gameStatusService.setCards(this.playersCard, botChoise);
+  public pickingWinner(playersCard: string, botCard: string) {
 
-    if (this.playersCard == botChoise) {
+    if (playersCard == botCard) {
       this.gameStatusService.set('draw');
       return;
     };
 
-    if (winСombinations[this.playersCard] == botChoise) {
+    if (winСombinations[playersCard] == botCard) {
       this.gameStatusService.set('win');
       return;
     }
 
     this.gameStatusService.set('fail');
+  }
+
+  public play(): void {
+    this.apiService.addOptions(baseCardDeck).subscribe((result) => {
+      if (result) {
+        this.botChoise = result.result;
+
+        this.gameStatusService.setCards(this.playersCard, this.botChoise);
+
+        this.pickingWinner(this.playersCard, this.botChoise);
+
+        this.router.navigate(['/result']);
+
+      }
+    },
+      (error) => {
+        console.log(error)
+      },
+      () => { }
+    );
   }
 
 }
