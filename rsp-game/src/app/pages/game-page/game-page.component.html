@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="subtitle-game">Ваш выбор:</div>
+    <div class="subtitle-game">Ваш выбор <button class="name" (click)="openAddNameDialog()">{{playersName}}</button> :</div>
     <div class="cards-container">
         <app-card cardName="paper" (playersCard)="playerChooses($event)"></app-card>
         <app-card cardName="rock" (playersCard)="playerChooses($event)"></app-card>

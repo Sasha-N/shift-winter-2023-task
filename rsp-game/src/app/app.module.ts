@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,8 @@ import { GamePageComponent } from './pages/game-page/game-page.component';
 import { CardComponent } from './card/card.component';
 import { ResultPageComponent } from './pages/result-page/result-page.component';
 import { SpecificationPageComponent } from './pages/specification-page/specification-page.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { AddNameDialogComponent } from './pages/add-name-dialog/add-name-dialog.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { SpecificationPageComponent } from './pages/specification-page/specifica
     GamePageComponent,
     CardComponent,
     ResultPageComponent,
-    SpecificationPageComponent
+    SpecificationPageComponent,
+    AddNameDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
