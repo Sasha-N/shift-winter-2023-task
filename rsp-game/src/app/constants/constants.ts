@@ -10,15 +10,15 @@ export const winСombinations: combinations = {
 
 export const winDescription = {
     title: 'Поздравляем с победой!',
-    image: './../../assets/win.png'
+    image: './../../assets/game-results/win.png'
 };
 
 export const drawDescription = {
     title: 'Победила дружба!',
-    image: './../../assets/friendship.png'
+    image: './../../assets/game-results/friendship.png'
 };
 
 export const failDescription = {
     title: 'К сожалению, вы проиграли',
-    image: './../../assets/fail.png'
+    image: './../../assets/game-results/fail.png'
 };

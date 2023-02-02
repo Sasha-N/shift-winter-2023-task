@@ -22,13 +22,18 @@ export class ResultPageComponent implements OnInit {
     if (this.resultStatus == 'win') {
       this.subtitleText = winDescription.title;
       this.imagePath = winDescription.image;
-    } else if (this.resultStatus == 'draw') {
+      return;
+    }
+
+    if (this.resultStatus == 'draw') {
       this.subtitleText = drawDescription.title;
       this.imagePath = drawDescription.image;
-    } else {
-      this.subtitleText = failDescription.title;
-      this.imagePath = failDescription.image;
+      return;
     }
+
+    this.subtitleText = failDescription.title;
+    this.imagePath = failDescription.image;
+
   }
 
 }
