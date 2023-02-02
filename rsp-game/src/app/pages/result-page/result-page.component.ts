@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GameStatusService } from '../providers/game-status.service';
-import { winDescription, drawDescription, failDescription } from '../constants/constants';
+import { GameStatusService } from './../../providers/game-status.service';
+import { winDescription, drawDescription, failDescription } from './../../constants/constants';
 
 @Component({
   selector: 'app-result-page',

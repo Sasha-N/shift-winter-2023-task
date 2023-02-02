@@ -1,8 +1,8 @@
 import { Component, OnInit} from '@angular/core';
-import { baseCardDeck } from './../constants/constants';
-import { winСombinations } from './../constants/constants';
-import { GameStatusService } from '../providers/game-status.service';
-import { ApiService } from '../providers/api.service';
+import { baseCardDeck } from '../../constants/constants';
+import { winСombinations } from '../../constants/constants';
+import { GameStatusService } from '../../providers/game-status.service';
+import { ApiService } from '../../providers/api.service';
 import { Router } from '@angular/router';
 
 @Component({
