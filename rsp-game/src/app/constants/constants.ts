@@ -1,5 +1,7 @@
 import { combinations } from "./interfaces";
 
+export const pagesRoutes: Array<string> = ['game', 'result'];
+
 export const baseCardDeck: Array<string> = ['paper', 'rock', 'scissor'];
 
 export const winСombinations: combinations = {

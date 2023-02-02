@@ -4,6 +4,7 @@ import { winСombinations } from '../../constants/constants';
 import { GameStatusService } from '../../providers/game-status.service';
 import { ApiService } from '../../providers/api.service';
 import { Router } from '@angular/router';
+import { pagesRoutes } from '../../constants/constants';
 
 @Component({
   selector: 'app-game-page',
@@ -47,7 +48,7 @@ export class GamePageComponent implements OnInit {
 
         this.pickingWinner(this.playersCard, this.botChoise);
 
-        this.router.navigate(['/result']);
+        this.router.navigate(['/' + pagesRoutes[1]]);
 
       }
     },
