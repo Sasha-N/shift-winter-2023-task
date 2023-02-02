@@ -8,7 +8,7 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { GamePageComponent } from './pages/game-page/game-page.component';
 import { CardComponent } from './card/card.component';
 import { ResultPageComponent } from './pages/result-page/result-page.component';
-import { SpecificationPageComponent } from './pages/specification-page/specification-page/specification-page.component';
+import { SpecificationPageComponent } from './pages/specification-page/specification-page.component';
 
 @NgModule({
   declarations: [

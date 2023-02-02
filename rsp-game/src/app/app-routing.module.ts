@@ -4,7 +4,7 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { GamePageComponent } from './pages/game-page/game-page.component';
 import { ResultPageComponent } from './pages/result-page/result-page.component';
 import { pagesRoutes } from './constants/constants';
-import { SpecificationPageComponent } from './pages/specification-page/specification-page/specification-page.component';
+import { SpecificationPageComponent } from './pages/specification-page/specification-page.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
