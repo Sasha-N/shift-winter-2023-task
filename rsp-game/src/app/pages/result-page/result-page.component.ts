@@ -29,6 +29,10 @@ export class ResultPageComponent implements OnInit {
     this.resultCards = this.gameStatusService.getCards();
     this.playersName = this.gameStatusService.getName();
 
+    if (!this.playersName) {
+      this.playersName = "Players1"
+    }
+
     this.localService.saveData('date', this.today.toLocaleString());
     this.localService.saveData('name', this.playersName);
 

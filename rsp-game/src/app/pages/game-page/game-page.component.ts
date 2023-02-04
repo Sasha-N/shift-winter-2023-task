@@ -22,6 +22,9 @@ export class GamePageComponent implements OnInit {
   constructor(private gameStatusService: GameStatusService, private apiService: ApiService, private router: Router, public matDialog: MatDialog) { }
 
   ngOnInit(): void {
+    if (this.gameStatusService.getName()) {
+      this.playersName = this.gameStatusService.getName();
+    }
   }
 
   public playerChooses(item: string): void {
@@ -51,6 +54,10 @@ export class GamePageComponent implements OnInit {
         this.botChoise = result.result;
 
         this.gameStatusService.setCards(this.playersCard, this.botChoise);
+
+        if (!this.gameStatusService.getName()) {
+          this.gameStatusService.setName(this.playersName);
+        }
 
         this.pickingWinner(this.playersCard, this.botChoise);
 
