@@ -51,7 +51,7 @@ export class GamePageComponent implements OnInit {
 
         this.pickingWinner(this.playersCard, this.botChoise);
 
-        this.router.navigate(['/' + pagesRoutes[1]]);
+        this.router.navigate(['/' + pagesRoutes['resultPage']]);
 
       }
     },

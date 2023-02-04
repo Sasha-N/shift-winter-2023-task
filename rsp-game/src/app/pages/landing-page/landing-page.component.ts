@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
-  public pathGame: string = '/' + pagesRoutes[0];
-  public pathSpecification: string = '/' + pagesRoutes[2];
+  public pathGame: string = '/' + pagesRoutes['gamePage'];
+  public pathSpecification: string = '/' + pagesRoutes['specPage'];
 
   constructor(private router: Router) { }
 
@@ -18,7 +18,7 @@ export class LandingPageComponent implements OnInit {
 
   openNewTab() {
     const url = this.router.serializeUrl(
-      this.router.createUrlTree(['/' + pagesRoutes[2]])
+      this.router.createUrlTree(['/' + pagesRoutes['specPage']])
     );
   
     window.open(url, '_blank');

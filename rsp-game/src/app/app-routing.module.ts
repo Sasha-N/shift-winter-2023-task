@@ -8,9 +8,9 @@ import { SpecificationPageComponent } from './pages/specification-page/specifica
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
-  { path: pagesRoutes[0], component: GamePageComponent },
-  { path: pagesRoutes[1], component: ResultPageComponent },
-  { path: pagesRoutes[2], component: SpecificationPageComponent }
+  { path: pagesRoutes['gamePage'], component: GamePageComponent },
+  { path: pagesRoutes['resultPage'], component: ResultPageComponent },
+  { path: pagesRoutes['specPage'], component: SpecificationPageComponent }
 ];
 
 @NgModule({

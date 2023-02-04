@@ -4,6 +4,7 @@ import { winDescription, drawDescription, failDescription } from './../../consta
 import { LocalService } from 'src/app/providers/local.service';
 import { HistoryComponent } from '../history/history.component';
 import { MatDialog } from '@angular/material/dialog';
+import { pagesRoutes } from './../../constants/constants';
 
 @Component({
   selector: 'app-result-page',
@@ -17,11 +18,13 @@ export class ResultPageComponent implements OnInit {
   public imagePath: string = '';
   public playersName: string = '';
   public today = new Date();
+  public pathGame: string = '';
 
 
   constructor(private gameStatusService: GameStatusService, private localService: LocalService, public matDialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.pathGame = '/' + pagesRoutes['gamePage'];
     this.resultStatus = this.gameStatusService.get();
     this.resultCards = this.gameStatusService.getCards();
     this.playersName = this.gameStatusService.getName();
