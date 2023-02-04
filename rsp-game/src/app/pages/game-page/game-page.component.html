@@ -5,7 +5,12 @@
         <app-card cardName="rock" (playersCard)="playerChooses($event)"></app-card>
         <app-card cardName="scissor" (playersCard)="playerChooses($event)"></app-card>
     </div>
-    <div class="btn-container">
+    <div *ngIf="!isLoading" class="btn-container">
        <button class="btn-play" (click)="play()">Играть</button> 
+    </div>
+    <div *ngIf="isLoading" class="loading-container">
+        <img class="loading-item" src="../../../assets/loading/circle.png">
+        <img class="loading-item" src="../../../assets/loading/box.png">
+        <img class="loading-item" src="../../../assets/loading/circle.png">
     </div>
 </div>

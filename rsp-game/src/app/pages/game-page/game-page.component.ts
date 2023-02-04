@@ -17,6 +17,7 @@ export class GamePageComponent implements OnInit {
   public playersCard: string = '';
   public botChoise: string = '';
   public playersName: string = 'Player1';
+  public isLoading: boolean = false;
 
   constructor(private gameStatusService: GameStatusService, private apiService: ApiService, private router: Router, public matDialog: MatDialog) { }
 
@@ -43,6 +44,8 @@ export class GamePageComponent implements OnInit {
   }
 
   public play(): void {
+    this.isLoading = true;
+    
     this.apiService.addOptions(baseCardDeck).subscribe((result) => {
       if (result) {
         this.botChoise = result.result;

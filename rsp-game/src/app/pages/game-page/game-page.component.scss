@@ -56,3 +56,16 @@
     border: none;
     background-color: transparent;
 }
+
+.loading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.loading-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
