@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { pagesRoutes } from '../../constants/constants';
 import { MatDialog } from '@angular/material/dialog';
 import { AddNameDialogComponent } from '../add-name-dialog/add-name-dialog.component';
+import { CreateCardComponent } from '../create-card/create-card.component'
 
 @Component({
   selector: 'app-game-page',
@@ -88,6 +89,22 @@ export class GamePageComponent implements OnInit {
       }
       this.playersName = data;
       this.gameStatusService.setName(this.playersName);
+    });
+  }
+  public openCreateCardDialog(): void {
+    let dialog;
+
+    dialog = this.matDialog.open(CreateCardComponent, {
+      panelClass: 'create-card',
+      data: {},
+      autoFocus: true,
+      width: '800px',
+    });
+
+    dialog.afterClosed().subscribe((data) => {
+      if (!data) {
+        return;
+      }
     });
   }
 

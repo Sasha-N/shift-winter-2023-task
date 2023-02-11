@@ -7,7 +7,7 @@
     </div>
     <div *ngIf="!isLoading" class="btn-container">
        <button class="btn-play" (click)="play()">Играть</button>
-       <button class="btn-create">Создать карту</button>
+       <button class="btn-create" (click)="openCreateCardDialog()">Создать карту</button>
     </div>
     <div *ngIf="isLoading" class="loading-container">
         <img class="loading-item" src="../../../assets/loading/circle.png">
