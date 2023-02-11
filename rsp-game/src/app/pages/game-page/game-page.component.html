@@ -6,11 +6,12 @@
         <app-card cardName="scissor" (playersCard)="playerChooses($event)"></app-card>
     </div>
     <div *ngIf="!isLoading" class="btn-container">
-       <button class="btn-play" (click)="play()">Играть</button> 
+       <button class="btn-play" (click)="play()">Играть</button>
+       <button class="btn-create">Создать карту</button>
     </div>
     <div *ngIf="isLoading" class="loading-container">
         <img class="loading-item" src="../../../assets/loading/circle.png">
         <img class="loading-item" src="../../../assets/loading/box.png">
         <img class="loading-item" src="../../../assets/loading/circle.png">
-    </div>
+    </div>  
 </div>
