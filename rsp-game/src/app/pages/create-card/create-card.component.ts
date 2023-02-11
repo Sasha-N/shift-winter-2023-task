@@ -14,7 +14,7 @@ export class CreateCardComponent implements OnInit {
   }
 
   public saveName() {
-    this.cardname = (<HTMLInputElement>document.getElementById("username")).value;
+    this.cardname = (<HTMLInputElement>document.getElementById("cardname")).value;
   }
 
 }

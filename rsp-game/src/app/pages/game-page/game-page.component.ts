@@ -99,6 +99,7 @@ export class GamePageComponent implements OnInit {
       data: {},
       autoFocus: true,
       width: '800px',
+      height: '800px'
     });
 
     dialog.afterClosed().subscribe((data) => {

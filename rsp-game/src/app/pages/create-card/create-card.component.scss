@@ -4,7 +4,7 @@
     font-weight: 600;
     font-size: 32px;
     line-height: 24px;
-    margin-bottom: 58px;
+    margin-bottom: 30px;
 }
 
 .new-card-name {
@@ -17,7 +17,6 @@
     font-size: 24px;
     border-color:  #E0E0E0;
     border-radius: 24px;
-    padding-left: 15px;
 }
 
 .btn-container {
@@ -25,7 +24,7 @@
 }
 
 .btn-ready {
-    margin-top: 10px;
+    margin-top: 30px;
     box-sizing: border-box;
     width: 323px;
     height: 68px;
@@ -44,4 +43,9 @@
 
 input:focus {
     outline:  #E0E0E0;
+}
+
+.new-card-picture-container {
+    margin-top: 30px;
+    height: 500px;
 }
