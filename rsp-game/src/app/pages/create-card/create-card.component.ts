@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-card.component.scss']
 })
 export class CreateCardComponent implements OnInit {
+  public cardname: string = "";
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public saveName() {
+    this.cardname = (<HTMLInputElement>document.getElementById("username")).value;
   }
 
 }
