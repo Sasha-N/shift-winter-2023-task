@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-create-card',
@@ -16,5 +17,8 @@ export class CreateCardComponent implements OnInit {
   public saveName() {
     this.cardname = (<HTMLInputElement>document.getElementById("cardname")).value;
   }
+
+  @ViewChild('paginator') paginator: MatPaginator | undefined;
+  @ViewChild('paginatorPageSize') paginatorPageSize: MatPaginator | undefined;
 
 }

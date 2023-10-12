@@ -14,6 +14,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AddNameDialogComponent } from './pages/add-name-dialog/add-name-dialog.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { CreateCardComponent } from './pages/create-card/create-card.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CreateCardComponent } from './pages/create-card/create-card.component';
     AppRoutingModule,
     HttpClientModule,
     MatDialogModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
