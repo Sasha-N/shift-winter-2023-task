@@ -1,10 +1,14 @@
 <div class="title">Впиши название латиницей и добавь картинку:</div>
 <div class="new-card-picture-container">
-    <button class="new-card-picture-button">
-        <img src="../../../assets/picture-icons/add_photo_alternate_FILL0_wght400_GRAD0_opsz48.png"></button>
+    <ng-container *ngFor="let image of visibleCards">
+        <button class="new-card-picture-button">
+                <img class="card-image" [src]="image.url" />
+        </button>
+    </ng-container>
 </div>
 
-<mat-paginator #paginator hidePageSize></mat-paginator>
+<mat-paginator #paginator [length]="defaultCards.length" [pageSize]="size" [pageIndex]="page" (page)="changePage($event)" hidePageSize></mat-paginator>
+
 <div class="new-card-name"><input class="new-card-name-input" id="cardname"></div>
 
 <div class="btn-container">
