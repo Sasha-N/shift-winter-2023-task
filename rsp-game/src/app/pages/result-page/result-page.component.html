@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="subtitle-game">Ваш выбор и выбор противника:</div>
+    <div class="result-container">
+        <div class="cards-result-container">
+            <app-card class="playerChooses" cardName="{{resultCards[0]}}"></app-card>
+            <app-card class="computerChooses" cardName="{{resultCards[1]}}"></app-card>
+        </div>
+        <div class="result-description">
+            <img src="{{imagePath}}">
+            <div class="result-description-group">
+                <div class="result-description-title">{{subtitleText}}</div>
+                <button class="btn-play" routerLink="{{pathGame}}">Играть еще раз</button>
+                <button class="btn-stat" (click)="openHistoryDialog()">Статистика</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="subtitle-game">Ваш выбор <button class="name" (click)="openAddNameDialog()">{{playersName}}</button> :</div>
+    <div class="cards-container">
+        <app-card cardName="paper" (playersCard)="playerChooses($event)"></app-card>
+        <app-card cardName="rock" (playersCard)="playerChooses($event)"></app-card>
+        <app-card cardName="scissor" (playersCard)="playerChooses($event)"></app-card>
+    </div>
+    <div *ngIf="!isLoading" class="btn-container">
+       <button class="btn-play" (click)="play()">Играть</button>
+       <button class="btn-create" (click)="openCreateCardDialog()">Создать карту</button>
+    </div>
+    <div *ngIf="isLoading" class="loading-container">
+        <img class="loading-item" src="../../../assets/loading/circle.png">
+        <img class="loading-item" src="../../../assets/loading/box.png">
+        <img class="loading-item" src="../../../assets/loading/circle.png">
+    </div>  
+</div>
